@@ -1,0 +1,29 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+
+# Top-level, no need to traverse higher
+root = true
+
+# YAML is sensitive to using spaces and not tabs, etc
+[*.yaml]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Match our written SQL to phpMyAdmin's style
+[*.sql]
+indent_style = space
+indent_size = 2
+
+# For everything else
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true

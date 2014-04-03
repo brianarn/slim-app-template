@@ -1,0 +1,10 @@
+{% extends "layout/main.html.twig" %}
+
+{% block title %}
+Awesome Application - Error
+{% endblock %}
+
+{% block content %}
+<h3>Error: {{ errorTitle }}</h3>
+<p class="alert alert-error">{{ errorMessage }}</p>
+{% endblock %}

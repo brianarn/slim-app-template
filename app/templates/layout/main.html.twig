@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="screen" href="/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" media="screen" href="/lib/bootstrap/css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" media="screen" href="/css/custom-screen.css">
+  <link rel="stylesheet" media="print" href="/css/custom-print.css">
+  {% block headContent %}{% endblock %}
+</head>
+
+<body>
+
+<!-- Navigation -->
+{% block nav %}
+  {% include "_partial/nav.html.twig" %}
+{% endblock %}
+
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="span12">
+      <h2>{% block header %}Awesome Application - Header Block Not Defined{% endblock %}</h2>
+      {% block flashMessage %}{% endblock %}
+    </div>
+
+  </div>
+
+  <!-- Main Content -->
+  {% block content %}
+    <h3>Awesome Application Needs Content</h3>
+    <p>No content defined!</p>
+  {% endblock %}
+
+  <!-- Footer -->
+  <hr>
+  {% include "_partial/footer.html.twig" %}
+
+</div> <!--/.container -->
+
+<!-- JavaScript -->
+<script src="/lib/jquery/jquery-1.11.0.min.js"></script>
+<script src="/lib/lodash/lodash.underscore.min.js"></script>
+<script src="/lib/handlebars/handlebars-v1.3.0.js"></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+{% block pagescript %}{% endblock %}
+
+</body>
+
+</html>
